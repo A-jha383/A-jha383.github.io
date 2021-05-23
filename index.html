@@ -80,9 +80,13 @@
             document.body.appendChild(css);
         };
     </script>
+
 </head>
 
 <body id="page-top">
+    <div class="spinner-wrapper">
+        <div class="spinner"></div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -434,6 +438,13 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="skill-item">
                             <i class="fa fa-terminal fa-5x"></i>
+                            <h2><span class="counter"> 77 </span><span>%</span></h2>
+                            <p>OS FORENSICS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="skill-item">
+                            <i class="fa fa-terminal fa-5x"></i>
                             <h2><span class="counter"> 75 </span><span>%</span></h2>
                             <p>KALI LINUX</p>
                         </div>
@@ -457,7 +468,7 @@
                         <div class="award-content">
                             <span class="date">Apr 2020 - Lifetime</span>
                             <a href="https://hackingflix.verified.cv/en/verify/30332041164483">
-                                <h5 class="title">Certified CYBER WARRIOR</h5>
+                                <h5 class="title">Certified CYBER WARRIOR badge</h5>
                             </a>
                             <p class="description">
                                 The holder of this badge has validated his skills in White Collar Crime Investigation, Web Application Security Vulnerability Scanning, Security Testing, Penetration Testing, Mobile Security, Metasploit, Malware Analysis, Kali Linux, Information Security
@@ -493,8 +504,9 @@
                     <div class="contact-cont">
                         <h3>CONTACT ME</h3>
                         <div class="heading-border-light"></div>
-                        <p></p>
+
                     </div>
+                    <p>Want to get in touch ? Here's how you can reach out to me.... </p>
                     <form action="https://formspree.io/f/xayaezln" method="POST" class="contact-form">
                         <div class="row con-form">
                             <div class="col-md-12">
@@ -780,7 +792,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <p>Skills gained:<br> White Collar Crime Investigation<br> Web Application Security<br> Vulnerability Scanning<br> Security Testing<br> Penetration Testing<br> Mobile Security<br> Metasploit
-                                        <br> Malware Analysis<br> Kali Linux<br> Information Security Audit<br> Information Gathering<br> Google Hacking<br> Ethical Hacking<br> Digital Forensics<br> Cyber Security<br> Computer Hacking Forensic Investigator<br>                                        Computer Forensics<br> Certified Ethical Hacker</p>
+                                        <br> Malware Analysis<br> Kali Linux<br> Information Security Audit<br> Information Gathering<br> Google Hacking<br> Ethical Hacking<br> Digital Forensics<br> Cyber Security<br> Computer Hacking Forensic Investigator
+                                        <br> Computer Forensics<br> Certified Ethical Hacker</p>
                                     <ul class="list-inline item-details">
                                         <li>Verify:
                                             <strong>
@@ -983,6 +996,7 @@
     <script src="js/counter/jquery.waypoints.min.js"></script>
     <script src="js/counter/jquery.counterup.min.js"></script>
     <script src="js/custom.js"></script>
+
     <script>
         $(document).ready(function() {
 
@@ -1009,6 +1023,18 @@
                 time: 2000
             });
 
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            //Preloader
+            preloaderFadeOutTime = 500;
+
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
         });
     </script>
 
