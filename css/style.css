@@ -802,7 +802,7 @@ section.resume-section .resume-item .resume-date {
 .spinner {
     width: 40px;
     height: 40px;
-    background-color: rgb(18, 14, 230);
+    background-color: #92278f;
     position: absolute;
     top: 48%;
     left: 48%;
@@ -843,6 +843,6 @@ section.resume-section .resume-item .resume-date {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #837471;
+    background-color: #00aeef;
     z-index: 999999;
 }
