@@ -846,3 +846,20 @@ section.resume-section .resume-item .resume-date {
     background-color: #00aeef;
     z-index: 999999;
 }
+
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: #92278f;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+
+/* Darker background on mouse-over */
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
