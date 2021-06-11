@@ -867,3 +867,12 @@ section.resume-section .resume-item .resume-date {
 .btn:hover {
     background-color: RoyalBlue;
 }
+
+
+/*icon*/
+
+@media (max-width:992px) {
+    img#optionalstuff {
+        display: none;
+    }
+}
