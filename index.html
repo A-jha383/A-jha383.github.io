@@ -84,9 +84,7 @@
 </head>
 
 <body id="page-top" background="back.jpg" background-size="cover">
-    <div class="spinner-wrapper">
-        <div class="spinner"></div>
-    </div>
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -1114,18 +1112,52 @@
 
         });
     </script>
-    <script>
-        $(document).ready(function() {
-            //Preloader
-            preloaderFadeOutTime = 5000;
-
-            function hidePreloader() {
-                var preloader = $('.spinner-wrapper');
-                preloader.fadeOut(preloaderFadeOutTime);
-            }
-            hidePreloader();
-        });
+    <div id="preloader">
+        <div id="status">
+        </div>
+    </div>
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(14, 13, 13);
+            /* change if the mask should have another color then white */
+            z-index: 99999;
+            /* makes sure it stays on top */
+        }
+        
+        #status {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 45%;
+            /* centers the loading animation horizontally one the screen */
+            top: 45%;
+            /* centers the loading animation vertically one the screen */
+            background-image: url("logo-s.gif");
+            z-index: 9999;
+            /* path to your loading animation */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: -50px 0 0 -50px;
+            /* is width and height divided by two */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(50).fadeOut(100); // will fade out the white DIV that covers the website.
+            $('body').delay(50).css({
+                'overflow': 'visible'
+            });
+        })
     </script>
+
 
 </body>
 
