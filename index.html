@@ -1,677 +1,264 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="Ayush jha" content="">
-
+    <meta name="description" content="Ayush Jha - Generative AI Solution Developer | Full-Stack Developer | Azure & AWS Expert">
+    <meta name="author" content="Ayush Jha">
+    <meta name="keywords" content="AI Developer, GenAI, Machine Learning, Full Stack, Azure, AWS, Python">
+    
     <link rel="shortcut icon" href="img/favicon.ico">
-    <title>Ayush Jha</title>
+    <title>Ayush Jha | AI Solution Developer</title>
 
-    <!-- Global stylesheets -->
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/devicons/css/devicons.min.css" rel="stylesheet">
-    <link href="css/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a1d8d03d15.js" crossorigin="anonymous"></script>
-
-    <!--JavaScript code for erase text effect-->
-    <script>
-        var TxtRotate = function(el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
-
-        TxtRotate.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
-
-            if (this.isDeleting) {
-                this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-                this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
-
-            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-            var that = this;
-            var delta = 300 - Math.random() * 100;
-
-            if (this.isDeleting) {
-                delta /= 2;
-            }
-
-            if (!this.isDeleting && this.txt === fullTxt) {
-                delta = this.period;
-                this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-                this.isDeleting = false;
-                this.loopNum++;
-                delta = 500;
-            }
-
-            setTimeout(function() {
-                that.tick();
-            }, delta);
-        };
-
-        window.onload = function() {
-            var elements = document.getElementsByClassName('txt-rotate');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-rotate');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-            // INJECT CSS
-            var css = document.createElement("style");
-            css.type = "text/css";
-            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666666 }";
-            document.body.appendChild(css);
-        };
-    </script>
-
+    <link href="css/animations-3d.css" rel="stylesheet">
+    
+    <!-- Typed.js for text animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
-<body id="page-top" background="back.jpg" background-size="cover">
+<body id="page-top">
+    <!-- Loading Animation -->
     <div id="preloader">
-        <div id="status">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="code-effect">&lt;AI/&gt;</div>
+            </div>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none  mx-0 px-0"><img src="img/logo-white.png" alt="" class="img-fluid"></span>
-            <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-        </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#page-top">
+                <span class="logo-text">&lt;AyushJha/&gt;</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <main>
 
-        <!--====================================================
-                        ABOUT
-    ======================================================-->
-        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about" onmousedown="return false" onselectstart="return false">
-            <div class="my-auto">
-                <img src="img/logo-s.gif" class="img-fluid mb-3" id="optionalstuff" alt="">
-                <h1 class="mb-0">Ayush
-                    <span class="text-primary">Jha</span>
-                </h1>
-                <div class="subheading mb-5">
-                    <h3 style="font-family:courier;"> I am a <span class="txt-rotate" style="color:blue;" data-period="2000" data-rotate='["Student.","MLSA(Beta).","Programmer.", "Developer.", "Pen-Tester.", "Cyber-Warrior."]'></span>
-                    </h3>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="hero-content">
+                            <p class="hero-greeting">Hi, I'm</p>
+                            <h1 class="hero-name">Ayush Jha</h1>
+                            <div class="hero-title">
+                                <span id="typed-text"></span>
+                            </div>
+                            <p class="hero-description mt-4">
+                                Experienced Generative AI Solution Developer with 2+ years of expertise in designing 
+                                and implementing scalable AI solutions using Python, LLMs, and cloud technologies.
+                            </p>
+                            <div class="hero-cta mt-5">
+                                <a href="#contact" class="btn btn-primary btn-lg me-3">
+                                    <i class="fas fa-envelope me-2"></i>Get In Touch
+                                </a>
+                                <a href="Ayush_Jha_Latest-1.pdf" download class="btn btn-outline-light btn-lg">
+                                    <i class="fas fa-download me-2"></i>Download CV
+                                </a>
+                            </div>
+                            <div class="hero-social mt-5">
+                                <a href="https://linkedin.com/in/00-ayush-jha" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/a-jha383" target="_blank" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://leetcode.com/ayushj383" target="_blank" class="social-icon">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                                <a href="mailto:official.ayushjha@gmail.com" class="social-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p class="mb-5" style="max-width: 500px;">I am a Computer Science scholar (Final year Btech) and coding enthusiast striving for new opportunities and knowledge with the empirical approach to further endeavours.</p>
-                <a href="Resume.pdf"><button class="btn"><i class="fa fa-download"></i> RESUME</button></a><br><br>
-                <ul class="list-inline list-social-icons mb-0">
-
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/profile.php?id=100028186568377">
-                            <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="twitter-timeline" href="https://twitter.com/_Ayush_Jha_">
-
-                            <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.linkedin.com/in/00-ayush-jha">
-                            <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://github.com/A-jha383">
-                            <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.hackerrank.com/ayushj383">
-                            <span class="fa-stack fa-lg">
-                                <i class='fa fa-circle fa-stack-2x'></i>
-                                <i class='fab fa-hackerrank fa-stack-1x fa-inverse'></i>
-                  </span>
-                        </a>
-                    </li>
-                </ul>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </section>
 
-        <!--====================================================
-                        EXPERIENCE
-    ======================================================-->
-        <section class="resume-section p-3 p-lg-5 " id="experience">
-            <div class="row my-auto">
-                <div class="col-12">
-                    <h2 class="  text-center">Experience</h2>
-                    <div class="mb-5 heading-border"></div>
-                </div>
-
-
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> Web Developer Intern</h4>
-                            <p>IT application for managing Reverse Mentoring Model at SAIL– ISP using Oracle, .NET & VB<br> </p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">April 2022 – Present</span>
-                        </div>
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="section-divider"></div>
                     </div>
                 </div>
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> Microsoft Learn Student Ambassador</h4>
-                            <p>Upgraded to Beta Microsoft student Ambassador level.<br><br> </p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">July 2021 - Present</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> Web Development Intern</h4>
-                            <p>Worked as a web development intern at the SHIVANJALI foundation for a period of 2 months. </p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">May 2021 - July 2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> TCS goIT </h4>
-                            <p>TCS go IT Student Digital Innovation Program in June 2021. Under which we proposed new innovative idea on which we will work soon. </p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">May 2021 - June 2021</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> Intern Andriod App developer</h4>
-                            <p>Worked as an INTERN for android app development under WHAT AFTER COLLEGE for a period of 45 days. </p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">April 2021 - May 2021</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> Penetration Testing</h4>
-                            <p>Performed full-fledged pen testing on "bishnupursilksaree.co.in". Provided complete report on website with proper patch details.</p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">April 2021 - May 2021</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-item col-md-6 col-sm-12">
-                    <div class="card mx-0 p-4 mb-5" style="border-color: #2196f3; box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.21);">
-                        <div class="resume-content mr-auto">
-                            <h4 class="mb-3"><i class="fa fa-area-chart mr-3 text-primary"></i> TCS Insight Trainee</h4>
-                            <p>A python based industrial training provided under TCS where we developed a complete food box website using Django and HTML</p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">December 2019 - March 2020</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--====================================================
-                        PORTFOLIO
-    ======================================================-->
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio" onmousedown="return false" onselectstart="return false">
-            <div class="row my-auto">
-                <div class="col-12">
-                    <h2 class="  text-center" style="color:white;">Portfolio</h2>
-                    <div class="mb-5 heading-border"></div>
-                </diV>
-                <div class="col-md-12">
-                    <div class="port-head-cont">
-                        <button class="btn btn-general btn-green filter-b" data-filter="all">All</button>
-                        <button class="btn btn-general btn-green filter-b" data-filter="consulting">Web API & Python Project</button>
-                        <button class="btn btn-general btn-green filter-b" data-filter="finance">Android App Projects</button>
-                        <button class="btn btn-general btn-green filter-b" data-filter="marketing">Certificates</button>
-                    </div>
-                </div>
-            </div>
-            <div class="row my-auto">
-                <div class="col-sm-4 portfolio-item filter consulting">
-                    <a class="portfolio-link" href="#portfolioModal001" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/port.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter finance">
-                    <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-4.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter consulting">
-                    <a class="portfolio-link" href="#portfolioModal002" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/drum.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter marketing">
-                    <a class="portfolio-link" href="#portfolioModal003" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/c-1.png" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter marketing">
-                    <a class="portfolio-link" href="#portfolioModal5" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-5.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter consulting">
-                    <a class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-6.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter consulting">
-                    <a class="portfolio-link" href="#portfolioModal7" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-7.jpg" alt="">
-                    </a>
-                </div>
-
-                <div class="col-sm-4 portfolio-item filter finance">
-                    <a class="portfolio-link" href="#portfolioModal9" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-9.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter marketing">
-                    <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-1.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter marketing">
-                    <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter finance">
-                    <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-3.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item filter consulting">
-                    <a class="portfolio-link" href="#portfolioModal10" data-toggle="modal">
-                        <div class="caption-port">
-                            <div class="caption-port-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img class="img-fluid" src="img/portfolio/p-11.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!--====================================================
-                        SKILLS
-    ======================================================-->
-        <section class=" d-flex flex-column" id="skills" onmousedown="return false" onselectstart="return false">
-            <div class="p-lg-5 p-3 skill-cover">
-                <h3 class="text-center text-white">Skills</h3>
-                <div class="row text-center my-auto ">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-mobile fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="54">54 </span><span>%</span></h2>
-                            <p>APP DEVELOPMENT</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-globe fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="72"> 72 </span><span>%</span></h2>
-                            <p>PEN TESTING</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-mobile fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="70"> 70 </span><span>%</span></h2>
-                            <p>ANDROID FORENSICS</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-globe fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="64"> 64 </span><span>%</span></h2>
-                            <p>MALWARE ANALISIS</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-terminal fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="75"> 75 </span><span>%</span></h2>
-                            <p>BASH</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-python fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="80"> 80 </span><span>%</span></h2>
-                            <p>PYTHON(2 & 3)</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-html5 fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="85"> 85 </span><span>%</span></h2>
-                            <p>HTML5</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-css3 fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="60"> 60 </span><span>%</span></h2>
-                            <p>CSS3</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-code fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="62"> 62 </span><span>%</span></h2>
-                            <p>JAVASCRIPT</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-php fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="55"> 55 </span><span>%</span></h2>
-                            <p>PHP</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-node-js fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="60"> 60 </span><span>%</span></h2>
-                            <p>Node JS</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-cuttlefish fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="75"> 75 </span><span>%</span></h2>
-                            <p>C</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-code fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="72"> 72 </span><span>%</span></h2>
-                            <p>C++</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-java fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="70"> 70 </span><span>%</span></h2>
-                            <p>JAVA</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fa fa-terminal fa-5x" style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="77"> 77 </span><span>%</span></h2>
-                            <p>OS FORENSICS</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-linux fa-5x " style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="75"> 75 </span><span>%</span></h2>
-                            <p>KALI LINUX</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-linux fa-5x " style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="55"> 55 </span><span>%</span></h2>
-                            <p>REMNUX</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-linux fa-5x " style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="60"> 60 </span><span>%</span></h2>
-                            <p>METASPLOIT</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fab fa-autoprefixer fa-5x " style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="71"> 71 </span><span>%</span></h2>
-                            <p>AUTOCAD</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="skill-item">
-                            <i class="fas fa-database fa-5x " style="color:#2196f3;"></i>
-                            <h2><span class="counter" data-count="55"> 55 </span><span>%</span></h2>
-                            <p>MongoDB</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--====================================================
-                           AWARDS
-    ======================================================-->
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards" onmousedown="return false" onselectstart="return false">
-            <div class="row my-auto">
-                <div class="col-12">
-                    <h2 class="  text-center">Awards</h2>
-                    <div class="mb-5 heading-border"></div>
-                </div>
-                <div class="main-award" id="award-box">
-                    <div class="award">
-                        <div class="award-icon"></div>
-                        <div class="award-content">
-                            <span class="date">Apr 2020 - Lifetime</span>
-                            <a href="https://hackingflix.verified.cv/en/verify/30332041164483">
-                                <h5 class="title">Certified CYBER WARRIOR badge</h5>
-                            </a>
-                            <p class="description">
-                                The holder of this badge has validated his skills in White Collar Crime Investigation, Web Application Security Vulnerability Scanning, Security Testing, Penetration Testing, Mobile Security, Metasploit, Malware Analysis, Kali Linux, Information Security
-                                Audit, Information Gathering, Google Hacking ,Ethical Hacking, Digital Forensics, Cyber Security, Computer Hacking Forensic Investigator Computer Forensics and Certified Ethical Hacker
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="about-content">
+                            <h3 class="gradient-text mb-4">Profile Summary</h3>
+                            <p class="lead mb-4">
+                                Experienced Generative AI Solution Developer with 2+ years of expertise in designing 
+                                and implementing scalable AI solutions using Python, LLMs, and cloud technologies.
+                            </p>
+                            <p>
+                                Proven track record in developing custom multi-agent systems, RAG pipelines, and 
+                                full-stack applications. Skilled in working with both in-house and hosted LLM solutions, 
+                                with extensive experience in Azure OpenAI, AWS Bedrock, OpenAI API, and enterprise AI frameworks.
+                            </p>
+                            <p class="mb-0">
+                                <strong>Microsoft Certified DevOps Expert</strong> and <strong>Salesforce Certified</strong> 
+                                professional with strong leadership experience and a passion for innovative AI-driven solutions.
                             </p>
                         </div>
                     </div>
-                    <div class="award">
-                        <div class="award-icon"></div>
-                        <div class="award-content">
-                            <span class="date">20 January 2021 - 20 January 2023</span>
-                            <a href="https://www.credly.com/badges/216d0eb0-3caa-489b-b597-1899a57eb4be?source=linked_in_profile">
-                                <h5 class="title">Cyber Security Foundation Professional Certificate - CSFPC™</h5>
-                            </a>
-                            <p class="description">
-                                The holder of this badge has validated his skills and knowledge in Cyber Security Fundamentals understanding key principles and concepts such as risk management, human factor, privacy and online rights, malware and attack technologies, adversarial behavior,
-                                security operations and incident management using as a source the Cyber Security Body of Knowledge (CyBOK) version 1.0 CyBOK Version 1.0 © Crown Copyright, The National Cyber Security Centre 2019.
-                            </p>
+                    <div class="col-lg-6">
+                        <div class="about-stats">
+                            <div class="stat-card card-3d glow-on-hover">
+                                <div class="stat-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4>2+ Years</h4>
+                                <p>Professional Experience</p>
+                            </div>
+                            <div class="stat-card card-3d glow-on-hover float-animation" style="animation-delay: 0.2s">
+                                <div class="stat-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4>7+</h4>
+                                <p>Professional Certifications</p>
+                            </div>
+                            <div class="stat-card card-3d glow-on-hover float-animation" style="animation-delay: 0.4s">
+                                <div class="stat-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h4>2</h4>
+                                <p>Company Awards</p>
+                            </div>
+                            <div class="stat-card card-3d glow-on-hover float-animation" style="animation-delay: 0.6s">
+                                <div class="stat-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>9.57/10</h4>
+                                <p>Academic CGPA</p>
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
-
         </section>
 
-        <!--====================================================
-                          CONTACT
-    ======================================================-->
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column">
-            <div class="row my-auto" id="contact">
-                <div class="col-md-8">
-                    <div class="contact-cont">
-                        <h3 style="color:rgb(237, 237, 245);">CONTACT ME</h3>
-                        <div class="heading-border-light"></div>
-
+        <!-- Experience Section -->
+        <section id="experience" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Professional Experience</h2>
+                        <div class="section-divider"></div>
                     </div>
-                    <p>Want to get in touch ? Here's how you can reach out to me.... </p>
-                    <form id="my-form" action="https://formspree.io/f/mdoyzlyw" method="POST" class="contact-form">
-                        <div class="row con-form">
-                            <div class="col-md-12">
-                                <input type="text" name="full-name" placeholder="Full Name" class="form-control">
-                            </div>
-                            <div class="col-md-12">
-                                <input type="email" name="email" id="email" type="email" placeholder="Email Id" class="form-control">
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" name="message" placeholder="Subject" class="form-control">
-                            </div>
-                            <div class="col-md-12"><textarea name="message" placeholder="Discription" id=""></textarea></div>
-                            <div class="col-md-12 sub-but"><button class="btn btn-general btn-white" role="button" id="my-form-button">Send</button>
-                                <br><br><br>
-                                <p id="my-form-status" style="color:rgb(71, 187, 233);"></p>
-                            </div>
-
-                        </div>
-                    </form>
                 </div>
-                <div class="col-md-4 col-sm-12 mt-5">
-                    <div class="contact-cont2">
-                        <div class="contact-add contact-box-desc">
-                            <h3><i class="fa fa-map-marker cl-atlantis fa-2x" style="color:#2196f3;"></i> Address</h3>
-                            <p>K190 Sukantanagar Biddhannagar <br> Kolkata,West Bengal,India <br></p>
+                
+                <!-- Senior Software Engineer -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2023 - Present</div>
+                        <div class="timeline-content">
+                            <h3>Senior Software Engineer</h3>
+                            <h4>Interra Information Technologies (India) Pvt. Ltd.</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt me-2"></i>Kolkata, IN</p>
+                            <ul class="experience-list">
+                                <li>Developed modular Generative AI framework using Python, LLMs, and Milvus vector database for processing structured and unstructured data with hybrid RAG pipelines</li>
+                                <li>Built custom multi-agent bot system from scratch with real-time coordination, shared context management, and dynamic routing capabilities; also experienced with AutoGen framework</li>
+                                <li>Implemented solutions using both in-house LLM deployments and hosted services including Azure OpenAI, AWS Bedrock, and Hugging Face endpoints</li>
+                                <li>Created reusable ETL transformation framework with dynamic logic application, validation, and performance optimizations</li>
+                                <li>Designed and deployed scalable AI solutions on AWS and Azure, improving data insights across diverse data types</li>
+                                <li>Experience with Microsoft Copilot integration and Salesforce Agentforce Specialist workflows</li>
+                                <li>Developed Power BI analytics dashboards for management and clients, improving reporting efficiency by 25%</li>
+                                <li>Implemented Azure DevOps CI/CD pipelines for streamlined deployment and testing</li>
+                                <li>Developed full-stack web applications with React and Angular</li>
+                            </ul>
+                            <div class="tech-tags mt-3">
+                                <span class="tag">Python</span>
+                                <span class="tag">LLMs</span>
+                                <span class="tag">Azure OpenAI</span>
+                                <span class="tag">AWS Bedrock</span>
+                                <span class="tag">RAG</span>
+                                <span class="tag">LangChain</span>
+                                <span class="tag">React</span>
+                            </div>
                         </div>
-                        <div class="contact-phone contact-side-desc contact-box-desc">
-                            <h3><i class="fas fa-phone-alt cl-atlantis fa-2x" style="color:#2196f3;"></i> Phone</h3>
-                            <p>+(91) 8637835583 <br></p>
+                    </div>
+
+                    <!-- Software Development Intern -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Apr 2022 - Sep 2022</div>
+                        <div class="timeline-content">
+                            <h3>Software Development Intern</h3>
+                            <h4>Steel Authority of India Limited (SAIL)</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt me-2"></i>Remote</p>
+                            <ul class="experience-list">
+                                <li>Designed enterprise IT application using Oracle, .NET, and Flutter for Reverse Mentoring Model</li>
+                                <li>Improved mentor-mentee matching efficiency by 40% through intelligent algorithms</li>
+                                <li>Delivered high-quality application through systematic testing and debugging</li>
+                            </ul>
+                            <div class="tech-tags mt-3">
+                                <span class="tag">Oracle</span>
+                                <span class="tag">.NET</span>
+                                <span class="tag">Flutter</span>
+                                <span class="tag">C#</span>
+                            </div>
                         </div>
-                        <div class="contact-mail contact-side-desc contact-box-desc">
-                            <h3><i class="fa fa-envelope-o cl-atlantis fa-2x" style="color:#2196f3;"></i> Email</h3>
-                            <address class="address-details-f"> 
-                  Email: <a href="mailto:ayushj383@gmail.com" class="tm-link-white">official.ayushjha@gamil.com</a>
-                </address>
-                            <ul class="list-inline social-icon-f top-data">
-                                <li style="padding-left:20px"><a href="https://www.facebook.com/profile.php?id=100028186568377" target="_empty"><i class="fa top-social fa-facebook fa-2x" style="color: #4267b2; border-color:#4267b2;"></i></a></li>
-                                <li style="padding-left:20px"><a href="https://twitter.com/AyushJh51366862?ref_src=twsrc%5Etfw" target="_empty"><i class="fa top-social fa-twitter fa-2x" style="color: #4AB3F4; border-color:#4AB3F4;"></i></a></li>
-                                <li style="padding-left:20px"><a href="#" target="_empty"><i class="fa top-social fa-google-plus fa-2x" style="color: #e24343; border-color:#e24343;"></i></a></li>
+                    </div>
+
+                    <!-- Leadership Experience -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Aug 2021 - Jul 2023</div>
+                        <div class="timeline-content">
+                            <h3>Microsoft Learn Student Ambassador</h3>
+                            <h4>Microsoft (Gold Level)</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt me-2"></i>Kolkata, IN</p>
+                            <ul class="experience-list">
+                                <li>Led technical workshops on Azure cloud services and AI development</li>
+                                <li>Collaborated with global tech community to promote skill development</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Aug 2021 - Aug 2022</div>
+                        <div class="timeline-content">
+                            <h3>Founding President</h3>
+                            <h4>Bytemonk - Technology Club</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt me-2"></i>Kolkata, IN</p>
+                            <ul class="experience-list">
+                                <li>Founded college's first Technology Club, establishing mentorship programs</li>
+                                <li>Organized technical workshops fostering peer learning</li>
                             </ul>
                         </div>
                     </div>
@@ -679,861 +266,484 @@
             </div>
         </section>
 
-        <section class=" d-flex flex-column" id="maps">
-            <div id="map">
-                <div class="map-responsive">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6724.987217507896!2d88.41277804931674!3d22.559714798124027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0274338b400689%3A0x6b153b372c5ea45f!2sK-190%2C%20Sukant%20Nagar%2C%20Sector%20IV%2C%20Bidhannagar%2C%20Kolkata%2C%20West%20Bengal%20700098!5e0!3m2!1sen!2sin!4v1621738710109!5m2!1sen!2sin"
-                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Technical Skills</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Programming Languages -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="skill-category">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programming Languages</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Bash</span>
+                                <span class="skill-tag">PowerShell</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GenAI & ML -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="skill-category">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>GenAI & ML Frameworks</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">LangChain</span>
+                                <span class="skill-tag">Hugging Face</span>
+                                <span class="skill-tag">OpenAI API</span>
+                                <span class="skill-tag">Azure OpenAI</span>
+                                <span class="skill-tag">Transformers</span>
+                                <span class="skill-tag">LlamaIndex</span>
+                                <span class="skill-tag">RAG Pipelines</span>
+                                <span class="skill-tag">Prompt Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="skill-category">
+                            <div class="skill-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3>Cloud & DevOps</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Azure ML</span>
+                                <span class="skill-tag">AWS Bedrock</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Azure DevOps</span>
+                                <span class="skill-tag">CI/CD</span>
+                                <span class="skill-tag">Containers</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Azure</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Frameworks -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="skill-category">
+                            <div class="skill-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>Frameworks & Libraries</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Next.js</span>
+                                <span class="skill-tag">Angular</span>
+                                <span class="skill-tag">ASP.NET</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">Three.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="skill-category">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Databases & Vector Stores</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Oracle</span>
+                                <span class="skill-tag">Milvus</span>
+                                <span class="skill-tag">ChromaDB</span>
+                                <span class="skill-tag">FAISS</span>
+                                <span class="skill-tag">SQLite</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="skill-category">
+                            <div class="skill-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Tools & Platforms</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Power BI</span>
+                                <span class="skill-tag">Power Apps</span>
+                                <span class="skill-tag">Power Automate</span>
+                                <span class="skill-tag">Blender</span>
+                                <span class="skill-tag">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Education</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                </div>
 
-    </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>B.Tech (Honours) in Computer Science Engineering</h3>
+                            <h4>Government College of Engineering And Ceramic Technology</h4>
+                            <div class="education-meta">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Kolkata, IN</span>
+                                <span><i class="fas fa-calendar me-2"></i>2019 - 2023</span>
+                            </div>
+                            <div class="education-grade">
+                                <strong>CGPA: 9.57/10.0 (Distinction)</strong>
+                            </div>
+                        </div>
 
-    <!--====================================================
-                    PORTFOLIO MODALS
-======================================================-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">CERTIFICATE</h2>
-                                    <div class="heading-border"></div>
-                                </div>
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <i class="fas fa-school"></i>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-1.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>SKILLS GAINED:<br> * Html<br> * JavaScript<br> * Cascading Style Sheets (CCS)<br> * Html5</p>
-                                    <ul class="list-inline item-details">
-                                        <li>Verify:
-                                            <strong>
-                                            <a href="https://coursera.org/share/665e031a9f21df0832a95091cdf9a06c">Certificate</a>
-                                          </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                            <a href="#">April 2020</a>
-                                          </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                            <a href="#">Web Development</a>
-                                          </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                      <i class="fa fa-times"></i> Close
-                                  </button>
-                                </div>
+                            <h3>Higher Secondary Certificate (XII)</h3>
+                            <h4>Army Public School Sukna</h4>
+                            <div class="education-meta">
+                                <span><i class="fas fa-map-marker-alt me-2"></i>Darjeeling, IN</span>
+                                <span><i class="fas fa-calendar me-2"></i>2018</span>
+                            </div>
+                            <div class="education-grade">
+                                <strong>Percentage: 81.8%</strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal003" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">CERTIFICATE</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/c2.JPG" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>MTA: Introduction to Programming Using Java - Certified 2021
-                                        <br> Issuer: Microsoft<br> Earners of the MTA: Introduction to Programming Using Java certification demonstrate the skills and knowledge to write, debug and maintain well-formed, well documented Java code. The MTA
-                                        program provides an appropriate entry point to a future career in technology.
-                                        <ul class="list-inline item-details">
-                                            <li>Verify:
-                                                <strong>
-                                          <a href="https://www.credly.com/badges/6d027910-c7ed-4b01-b31f-ae6c200b366b/public_url">Certificate</a>
-                                        </strong>
-                                            </li>
-                                            <li>Date:
-                                                <strong>
-                                          <a href="#">June 2021</a>
-                                        </strong>
-                                            </li>
-                                            <li>Service:
-                                                <strong>
-                                          <a href="#">Java Programming</a>
-                                        </strong>
-                                            </li>
-                                        </ul>
-                                        <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">CERTIFICATE</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-2.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>SKILLS GAINED:<br> *Logic Programming<br> *Android Studio<br> *Java Programming<br> *Object-Oriented Programming (OOP)</p>
-                                    <ul class="list-inline item-details">
-                                        <li>Verify:
-                                            <strong>
-                                          <a href="https://coursera.org/share/31f86df18f3f16091b95ed88ea160946">Certificate</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">April 2020</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">CERTIFICATE</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-2.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>SKILLS GAINED:<br> *Logic Programming<br> *Android Studio<br> *Java Programming<br> *Object-Oriented Programming (OOP)</p>
-                                    <ul class="list-inline item-details">
-                                        <li>Verify:
-                                            <strong>
-                                          <a href="https://coursera.org/share/31f86df18f3f16091b95ed88ea160946">Certificate</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">April 2020</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">MEME SHARE APP</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-3.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>In this Project I have developed a meme share android application using JSON API for a random meme scraped from Reddit.<br> API Link : https://reddit-meme-api.herokuapp.com/<br> Meme Sharing Application using volley
-                                        API and glide library.</p>
-                                    <ul class="list-inline item-details">
-                                        <li>View project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/Meme_share_app">Code File</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">April 2021</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Android App Developement</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">NEWS APP</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-4.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>An application which fetches news from the NEWS API and display the trending news in the recycler view and Click Listener is added to read the article associated with the news which is done using CHROME CUSTOM TABS.
-                                        New feature in choosing a category for which type of news to be displayed is added.</p>
-                                    <ul class="list-inline item-details">
-                                        <li>View Project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/news_app">Code File</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">April 2021</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Android App Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">CERTIFICATE</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-5 - Copy.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>Skills gained:<br> White Collar Crime Investigation<br> Web Application Security<br> Vulnerability Scanning<br> Security Testing<br> Penetration Testing<br> Mobile Security<br> Metasploit
-                                        <br> Malware Analysis<br> Kali Linux<br> Information Security Audit<br> Information Gathering<br> Google Hacking<br> Ethical Hacking<br> Digital Forensics<br> Cyber Security<br> Computer Hacking Forensic Investigator
-                                        <br> Computer Forensics<br> Certified Ethical Hacker</p>
-                                    <ul class="list-inline item-details">
-                                        <li>Verify:
-                                            <strong>
-                                          <a href="https://hackingflix.verified.cv/en/verify/30332041164483">Certificate</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">AUGUST 2020</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">CYBER SECURITY</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">MOVIE REVIEW WEBSITE API</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-6.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>
-                                        In this project a complete API for any movie review website is developed using nodejs.<br> To use this API some packages needs to be installed. They are:<br> 1)express [npm i express]<br> 2)nodemon [npm i --save-devnodemon]<br>                                        3)morgan [npm i morgan]<br> 4)winston [npm i winston]<br> 5)mongoDB(database connection) [npm i mongodb]<br> 6)bson [npm i bson]<br> 7)http-error [npm i http-error]<br> 8)joi [npm i @hapi/joi]<br> 9)bcryptjs [npm
-                                        i bcryptjs]<br> 10)json web token [npm i jsonwebtoken]<br> 11)dotenv [npm i dotenv]<br> 12)mail [npm i @sendgrid/mail]<br> *** before using this api database and sendgrid informations needs to be updated.<br> ***
-                                        process is provided with the code
-                                    </p>
+        </section>
 
-                                    <ul class="list-inline item-details">
-                                        <li>View Project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/COMPLETE_API">Code file</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">January 2021</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Certifications</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Microsoft Certified: DevOps Engineer Expert</h4>
+                            <p class="cert-issuer">Microsoft</p>
+                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AYUSHJHA-5015/D40DE59F9E6097C4?sharingId=BBD14A8CE05A544F" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Microsoft Certified: Azure AI Engineer Associate</h4>
+                            <p class="cert-issuer">Microsoft</p>
+                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AYUSHJHA-5015/706016D277EA8801?sharingId=BBD14A8CE05A544F" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Microsoft Certified: Power BI Data Analyst Associate</h4>
+                            <p class="cert-issuer">Microsoft</p>
+                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AYUSHJHA-5015/87EEED615F50BEC3?sharingId=BBD14A8CE05A544F" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Microsoft Certified: Azure Developer Associate</h4>
+                            <p class="cert-issuer">Microsoft</p>
+                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AYUSHJHA-5015/BE0DDC3F22DE7CD2?sharingId=BBD14A8CE05A544F" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Microsoft Certified: Fabric Analytics Engineer Associate</h4>
+                            <p class="cert-issuer">Microsoft</p>
+                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AYUSHJHA-5015/FE722CB0B8E9BBC4?sharingId=BBD14A8CE05A544F" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Salesforce Certified: Agentforce Specialist</h4>
+                            <p class="cert-issuer">Salesforce</p>
+                            <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=JIAuvu26Ebdz0ErksrBmPehJIi9zqIdqcvij1T/s6aF1HMBcJbQ1lyTM4yYGZdWl" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="cert-card">
+                            <div class="cert-badge">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Foundation of Cloud IoT Edge Machine Learning</h4>
+                            <p class="cert-issuer">NPTEL</p>
+                            <a href="https://archive.nptel.ac.in/content/noc/NOC23/SEM1/Ecertificates/106/noc23-cs65/Course/NPTEL23CS65S3396038704078680.jpg" target="_blank" class="cert-link">
+                                Verify Credential <i class="fas fa-external-link-alt ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Awards & Recognition</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <div class="col-lg-6">
+                        <div class="award-card">
+                            <div class="award-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>"Star Rookie of the Year 2024"</h3>
+                            <p class="award-company">InterraIT</p>
+                            <p class="award-description">
+                                Recognized for exceptional contributions to AI projects and demonstrating 
+                                outstanding technical skills and innovation in Generative AI solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="award-card">
+                            <div class="award-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>"Promising Junior Award Q4 2023"</h3>
+                            <p class="award-company">InterraIT</p>
+                            <p class="award-description">
+                                Awarded for demonstrating exceptional technical leadership, innovative problem-solving, 
+                                and significant contributions to team success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center mb-5">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <div class="section-divider"></div>
+                        <p class="section-subtitle mt-3">
+                            I'm currently open to new opportunities and collaborations. 
+                            Feel free to reach out!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form id="contact-form" class="contact-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" id="subject" name="subject" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="contact-info mt-5">
+                            <div class="row g-4 text-center">
+                                <div class="col-md-4">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <h5>Email</h5>
+                                        <a href="mailto:official.ayushjha@gmail.com">official.ayushjha@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-item">
+                                        <i class="fab fa-linkedin"></i>
+                                        <h5>LinkedIn</h5>
+                                        <a href="https://linkedin.com/in/00-ayush-jha" target="_blank">00-ayush-jha</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-item">
+                                        <i class="fab fa-github"></i>
+                                        <h5>GitHub</h5>
+                                        <a href="https://github.com/a-jha383" target="_blank">A-jha383</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal001" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">Portfolio Website Template </h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/port.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>
-                                        In this project I have developed a Complete Portfolio website template is developed using HTML, CSS and JS.
-                                    </p>
+        </section>
 
-                                    <ul class="list-inline item-details">
-                                        <li>View Sample:
-                                            <strong>
-                                          <a href="https://5kgf7tdpqbb4fhk3oqwqmq-on.drv.tw/website/Portfolio/">Click Here</a>
-                                        </strong>
-                                        </li>
-                                        <li>Get Template:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/Simple_Portfolio_website.git">Template file</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">June 2021</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="mb-3">&copy; 2025 Ayush Jha. All rights reserved.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/00-ayush-jha" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/a-jha383" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://leetcode.com/ayushj383" target="_blank"><i class="fas fa-code"></i></a>
+                        <a href="mailto:official.ayushjha@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal002" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">Drum Kit Website</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/drum.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>
-                                        In this project I have tried to develop a complete Virtual Drum Kit using JavaScript.
-                                    </p>
+    </footer>
 
-                                    <ul class="list-inline item-details">
-                                        <li>View Sample:
-                                            <strong>
-                                          <a href="https://5kgf7tdpqbb4fhk3oqwqmq-on.drv.tw/website/Drum_Kit_Completed/">Click Here</a>
-                                        </strong>
-                                        </li>
-                                        <li>View Project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/Drum_Kit.git">Code file</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">September 2020</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">J.A.R.V.I.S</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-7.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>AI ASSISTANT which can perform multiple tasks on voice command and makes your computer special<br> FEATURES ARE:<br> WISHES USER WITH PROPER TIME<br>SENDING EMAIL <br>CPU STATUS<br>GOOGLE & YOUTUBE SEARCH<br> JOKE
-                                        <br>SWITCH ON/OFF/RESTART YOUR COMPUTER<br>DICTIONARY<br>VOICE NOTE<br>ALARM CLOCK<br>SCREENSHOT<br>NEWS <br> AND MANY MORE........
-
-
-                                    </p>
-                                    <ul class="list-inline item-details">
-                                        <li>View project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/jarvis">Code file</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">December 2020</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Python Project</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">CHARITY WEBSITE BACKEND</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-11.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>
-                                        In this project I have developed complete back-end portion for a charity website using Django.
-                                    </p>
-
-                                    <ul class="list-inline item-details">
-                                        <li>View Project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/Charity_backend.git">Code file</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">June 2020</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Web Development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl"></div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="modal-body">
-                            <div class="title-bar">
-                                <div class="col-md-12">
-                                    <h2 class="text-center">GITHUB PROFILE SEARCH APP</h2>
-                                    <div class="heading-border"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img class="img-fluid img-centered" src="img/portfolio/p-9.jpg" alt="">
-                                </div>
-                                <div class="col-md-6">
-                                    <p>In this app user just needs to provide a username and will be able to view complete profile in a structured way.
-                                        <br> *** No need to login to your account.
-                                    </p>
-                                    <ul class="list-inline item-details">
-                                        <li>View project:
-                                            <strong>
-                                          <a href="https://github.com/A-jha383/github_profile_checker_app">Code file</a>
-                                        </strong>
-                                        </li>
-                                        <li>Date:
-                                            <strong>
-                                          <a href="#">May 2021</a>
-                                        </strong>
-                                        </li>
-                                        <li>Service:
-                                            <strong>
-                                          <a href="#">Android App development</a>
-                                        </strong>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-general btn-white" type="button" data-dismiss="modal">
-                                    <i class="fa fa-times"></i> Close
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Global javascript -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/counter/jquery.waypoints.min.js"></script>
-    <script src="js/counter/jquery.counterup.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
-
+    
     <script>
-        $(document).ready(function() {
+        // Preloader
+        window.addEventListener('load', function() {
+            document.getElementById('preloader').style.opacity = '0';
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none';
+            }, 500);
+        });
 
-            $(".filter-b").click(function() {
-                var value = $(this).attr('data-filter');
-                if (value == "all") {
-                    $('.filter').show('1000');
-                } else {
-                    $(".filter").not('.' + value).hide('3000');
-                    $('.filter').filter('.' + value).show('3000');
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
+        });
 
-            if ($(".filter-b").removeClass("active")) {
-                $(this).removeClass("active");
+        // Navbar Background on Scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
-            $(this).addClass("active");
         });
 
-        // SKILLS
-        $(function() {
-            $('.counter').counterUp({
-                delay: 10,
-                time: 2000
-            });
-
+        // Contact Form Handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send the data to a server
+            // For now, we'll just show an alert
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
         });
     </script>
-
-    <style>
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #333333;
-            /* change if the mask should have another color then white */
-            z-index: 99999;
-            /* makes sure it stays on top */
-        }
-        
-        #status {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            left: 49%;
-            /* centers the loading animation horizontally one the screen */
-            top: 49%;
-            /* centers the loading animation vertically one the screen */
-            background-image: url("logo-s.gif");
-            z-index: 9999;
-            /* path to your loading animation */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            margin: -50px 0 0 -50px;
-            /* is width and height divided by two */
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            // makes sure the whole site is loaded
-            $('#status').fadeOut(); // will first fade out the loading animation
-            $('#preloader').delay(50).fadeOut(100); // will fade out the white DIV that covers the website.
-            $('body').delay(50).css({
-                'overflow': 'visible'
-            });
-        })
-
-        var counted = 0;
-        $(window).scroll(function() {
-
-            var oTop = $('#skills').offset().top - window.innerHeight;
-            if (counted == 0 && $(window).scrollTop() > oTop) {
-                $('.counter').each(function() {
-                    var $this = $(this),
-
-                        countTo = $this.attr('data-count');
-                    $({
-                        countNum: 0
-                    }).animate({
-
-                            countNum: countTo
-                        },
-
-                        {
-
-                            duration: 3000,
-                            easing: 'swing',
-                            step: function() {
-                                $this.text(Math.floor(this.countNum));
-                            },
-                            complete: function() {
-                                $this.text(this.countNum);
-                                //alert('finished');
-                            }
-
-                        });
-                });
-                counted = 1;
-            }
-
-        });
-    </script>
-    <script>
-        var form = document.getElementById("my-form");
-
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.getElementById("my-form-status");
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                status.innerHTML = "Thanks for your submission!";
-                form.reset()
-            }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
-            });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script>
-
-
 </body>
-
 </html>
