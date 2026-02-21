@@ -1,5 +1,5 @@
 /* ===================================
-   ENHANCED 3D ANIMATIONS & EFFECTS
+   AI/ML ENHANCED 3D ANIMATIONS
    Portfolio - Ayush Jha
    =================================== */
 
@@ -12,561 +12,231 @@
 
 .card-3d:hover {
     transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
-    box-shadow: 0 25px 50px rgba(70, 130, 180, 0.3),
+    box-shadow: 0 25px 50px rgba(108, 99, 255, 0.2),
                 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Enhanced Stat Cards with 3D */
+/* Stat Cards 3D */
 .stat-card {
     transform-style: preserve-3d;
     perspective: 1000px;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(70, 130, 180, 0.1), rgba(54, 160, 245, 0.1));
-    border-radius: 12px;
-    transform: translateZ(-10px);
-    opacity: 0;
-    transition: opacity 0.6s ease;
 }
 
 .stat-card:hover {
-    transform: translateY(-15px) rotateX(8deg) scale(1.02);
-    box-shadow: 0 30px 60px rgba(70, 130, 180, 0.3),
-                0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.stat-card:hover::before {
-    opacity: 1;
-}
-
-.stat-icon {
-    transform: translateZ(20px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-15px) rotateX(5deg) scale(1.02);
+    box-shadow: 0 30px 60px rgba(108, 99, 255, 0.2),
+                0 0 1px rgba(0, 217, 255, 0.3);
 }
 
 .stat-card:hover .stat-icon {
-    transform: translateZ(30px) rotateY(360deg);
+    transform: translateZ(20px) rotateY(360deg);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Timeline 3D Effect */
-.timeline-item {
-    transform-style: preserve-3d;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* Timeline 3D */
 .timeline-content {
     transform-style: preserve-3d;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.timeline-content::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: -10px;
-    bottom: -10px;
-    background: rgba(70, 130, 180, 0.1);
-    border-radius: 12px;
-    z-index: -1;
-    opacity: 0;
-    transform: translateZ(-20px);
-    transition: all 0.6s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .timeline-content:hover {
-    transform: translateX(15px) translateZ(10px) rotateY(2deg);
+    transform: translateX(10px) translateZ(5px);
 }
 
-.timeline-content:hover::after {
-    opacity: 1;
-}
-
-/* Skill Category 3D Flip Effect */
+/* Skill Category 3D */
 .skill-category {
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.skill-category::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(70, 130, 180, 0.15), transparent);
-    border-radius: 12px;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    transform: translateZ(-15px);
-}
-
-.skill-category:hover {
-    transform: translateY(-20px) rotateX(10deg) rotateY(-5deg) scale(1.03);
-    box-shadow: 0 35px 70px rgba(70, 130, 180, 0.35),
-                0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-.skill-category:hover::before {
-    opacity: 1;
-}
-
-.skill-icon {
-    transform-style: preserve-3d;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .skill-category:hover .skill-icon {
-    transform: translateZ(25px) rotateZ(360deg);
+    transform: translateZ(15px) rotateZ(10deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Certification Cards 3D */
+/* AI Card 3D */
+.ai-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-card:hover .ai-card-icon {
+    transform: translateZ(20px) rotateY(10deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Project Card 3D */
+.project-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover .project-icon {
+    transform: translateZ(15px) rotateZ(-5deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Cert Card 3D */
 .cert-card {
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: visible;
-}
-
-.cert-card::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(135deg, rgba(70, 130, 180, 0.2), rgba(54, 160, 245, 0.1));
-    border-radius: 12px;
-    z-index: -1;
-    opacity: 0;
-    transform: translateZ(-25px);
-    transition: all 0.7s ease;
-}
-
-.cert-card:hover {
-    transform: translateY(-15px) rotateX(8deg) rotateY(-8deg);
-    box-shadow: 0 30px 60px rgba(70, 130, 180, 0.4),
-                0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.cert-card:hover::after {
-    opacity: 1;
-}
-
-.cert-badge {
-    transform: translateZ(20px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cert-card:hover .cert-badge {
-    transform: translateZ(35px) rotateY(720deg) scale(1.1);
+    transform: translateZ(20px) rotateY(360deg);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Education Cards 3D */
+/* Education Card 3D */
 .education-card {
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.education-card:hover {
-    transform: translateY(-20px) rotateX(10deg) scale(1.02);
-    box-shadow: 0 35px 70px rgba(70, 130, 180, 0.35),
-                0 25px 50px rgba(0, 0, 0, 0.2);
-}
-
-.education-icon {
-    transform: translateZ(25px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .education-card:hover .education-icon {
-    transform: translateZ(40px) rotateY(360deg) scale(1.15);
+    transform: translateZ(25px) rotateY(360deg) scale(1.1);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Award Cards with 3D Trophy Effect */
+/* Award Card 3D */
 .award-card {
     transform-style: preserve-3d;
     perspective: 1000px;
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.award-card::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent);
-    border-radius: 12px;
-    opacity: 0;
-    transition: opacity 0.7s ease;
-    z-index: -1;
-}
-
-.award-card:hover {
-    transform: translateY(-20px) rotateX(10deg) scale(1.05);
-    box-shadow: 0 40px 80px rgba(255, 215, 0, 0.2),
-                0 30px 60px rgba(70, 130, 180, 0.3),
-                0 0 40px rgba(255, 215, 0, 0.1);
-}
-
-.award-card:hover::before {
-    opacity: 1;
-}
-
-.award-icon {
-    transform: translateZ(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .award-card:hover .award-icon {
-    transform: translateZ(50px) rotateY(360deg) scale(1.2);
+    transform: translateZ(30px) rotateY(360deg) scale(1.15);
     filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Social Icons 3D Bounce */
+/* Social Icon 3D */
 .social-icon {
     transform-style: preserve-3d;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .social-icon:hover {
-    transform: translateY(-10px) translateZ(15px) rotateZ(360deg) scale(1.2);
-    box-shadow: 0 15px 30px rgba(70, 130, 180, 0.4),
-                0 0 30px rgba(70, 130, 180, 0.3);
+    transform: translateY(-8px) translateZ(10px) scale(1.1);
 }
 
-/* Button 3D Press Effect */
+/* Button 3D */
 .btn-primary,
 .btn-outline-light {
     transform-style: preserve-3d;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
 }
 
-.btn-primary::before,
-.btn-outline-light::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    border-radius: inherit;
-    transform: translateZ(-10px);
-    opacity: 0.5;
-    transition: all 0.4s ease;
+.btn-primary:hover {
+    transform: translateY(-5px) translateZ(8px);
 }
 
-.btn-primary:hover,
-.btn-outline-light:hover {
-    transform: translateY(-8px) translateZ(10px);
-    box-shadow: 0 20px 40px rgba(70, 130, 180, 0.4),
-                0 10px 20px rgba(0, 0, 0, 0.2);
+.btn-primary:active {
+    transform: translateY(-2px) translateZ(3px);
 }
 
-.btn-primary:active,
-.btn-outline-light:active {
-    transform: translateY(-2px) translateZ(5px);
-    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.3);
-}
-
-/* Hero Name 3D Effect */
+/* Hero Name 3D Float */
 .hero-name {
     transform-style: preserve-3d;
-    animation: float3d 6s ease-in-out infinite;
-    text-shadow: 
-        2px 2px 0px rgba(70, 130, 180, 0.3),
-        4px 4px 0px rgba(70, 130, 180, 0.2),
-        6px 6px 0px rgba(70, 130, 180, 0.1),
-        0 0 40px rgba(70, 130, 180, 0.2);
 }
 
-@keyframes float3d {
-    0%, 100% {
-        transform: translateY(0px) rotateX(0deg);
-        text-shadow: 
-            2px 2px 0px rgba(70, 130, 180, 0.3),
-            4px 4px 0px rgba(70, 130, 180, 0.2),
-            6px 6px 0px rgba(70, 130, 180, 0.1);
-    }
-    50% {
-        transform: translateY(-10px) rotateX(5deg);
-        text-shadow: 
-            4px 4px 0px rgba(70, 130, 180, 0.3),
-            8px 8px 0px rgba(70, 130, 180, 0.2),
-            12px 12px 0px rgba(70, 130, 180, 0.1);
-    }
-}
-
-/* Scroll Indicator 3D */
-.scroll-indicator a {
-    transform-style: preserve-3d;
-    animation: bounce3d 2s infinite;
-    display: inline-block;
-}
-
-@keyframes bounce3d {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) translateZ(0) scale(1);
-    }
-    40% {
-        transform: translateY(-15px) translateZ(10px) scale(1.1);
-    }
-    60% {
-        transform: translateY(-7px) translateZ(5px) scale(1.05);
-    }
-}
-
-/* Navbar 3D Glassmorphism */
-#mainNav.scrolled {
-    backdrop-filter: blur(20px) saturate(180%);
-    background: rgba(10, 25, 47, 0.85);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
-                0 0 20px rgba(70, 130, 180, 0.1);
-    transform-style: preserve-3d;
-}
-
-/* Contact Form 3D */
-.contact-form {
-    transform-style: preserve-3d;
-    position: relative;
-}
-
-.form-control {
-    transform-style: preserve-3d;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-control:focus {
-    transform: translateZ(5px);
-    box-shadow: 0 10px 30px rgba(70, 130, 180, 0.2);
-}
-
-/* Skill Tags 3D Hover */
-.skill-tag {
-    transform-style: preserve-3d;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.skill-tag:hover {
-    transform: translateY(-5px) translateZ(10px) rotateZ(5deg);
-    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.3);
-}
-
-/* Timeline Dot Pulse 3D */
-.timeline-dot {
-    animation: pulse3d 2s ease-in-out infinite;
-}
-
-@keyframes pulse3d {
-    0%, 100% {
-        transform: scale(1) translateZ(0);
-        box-shadow: 0 0 0 0 rgba(70, 130, 180, 0.7);
-    }
-    50% {
-        transform: scale(1.1) translateZ(5px);
-        box-shadow: 0 0 0 10px rgba(70, 130, 180, 0);
-    }
-}
-
-/* Section Title 3D Underline */
-.section-divider {
-    transform-style: preserve-3d;
-    animation: grow3d 1.5s ease-out;
-    box-shadow: 0 5px 15px rgba(70, 130, 180, 0.3);
-}
-
-@keyframes grow3d {
-    from {
-        transform: scaleX(0) translateZ(-10px);
-        opacity: 0;
-    }
-    to {
-        transform: scaleX(1) translateZ(0);
-        opacity: 1;
-    }
-}
-
-/* Hero Background Grid 3D */
-.hero-bg::before {
-    animation: grid-move-3d 20s linear infinite;
-}
-
-@keyframes grid-move-3d {
-    0% {
-        transform: translateY(0) translateZ(0) scale(1);
-    }
-    50% {
-        transform: translateY(25px) translateZ(10px) scale(1.02);
-    }
-    100% {
-        transform: translateY(50px) translateZ(0) scale(1);
-    }
-}
-
-/* Loading Animation Enhanced 3D */
-@keyframes spin3d {
-    0% {
-        transform: rotate(0deg) rotateY(0deg) rotateX(0deg);
-    }
-    33% {
-        transform: rotate(120deg) rotateY(180deg) rotateX(60deg);
-    }
-    66% {
-        transform: rotate(240deg) rotateY(360deg) rotateX(120deg);
-    }
-    100% {
-        transform: rotate(360deg) rotateY(540deg) rotateX(180deg);
-    }
-}
-
-/* Floating Animation for Cards */
+/* Floating Animation */
 @keyframes float-gentle {
-    0%, 100% {
-        transform: translateY(0px) translateZ(0);
-    }
-    50% {
-        transform: translateY(-10px) translateZ(5px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
 .float-animation {
     animation: float-gentle 4s ease-in-out infinite;
 }
 
-/* Glow Effect on Hover */
+/* Glow on Hover */
 .glow-on-hover {
     transition: all 0.5s ease;
 }
 
 .glow-on-hover:hover {
-    box-shadow: 0 0 20px rgba(70, 130, 180, 0.6),
-                0 0 40px rgba(70, 130, 180, 0.4),
-                0 0 60px rgba(70, 130, 180, 0.2),
-                0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.4),
+                0 0 40px rgba(108, 99, 255, 0.2),
+                0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Parallax 3D Layers */
-.parallax-layer {
-    transform-style: preserve-3d;
-    transition: transform 0.1s ease-out;
+/* Timeline Dot Pulse */
+.timeline-dot {
+    animation: dotPulse 2.5s ease-in-out infinite;
 }
 
-/* Ripple Effect on Click */
+@keyframes dotPulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1); }
+    50% { box-shadow: 0 0 0 8px rgba(108, 99, 255, 0.05), 0 0 15px rgba(0, 217, 255, 0.2); }
+}
+
+/* Section Divider Animation */
+.section-divider {
+    animation: dividerGrow 1.5s ease-out;
+}
+
+@keyframes dividerGrow {
+    from { transform: scaleX(0); opacity: 0; }
+    to { transform: scaleX(1); opacity: 1; }
+}
+
+/* Entrance Animations */
+@keyframes fadeInUp3d {
+    from { opacity: 0; transform: translateY(30px) translateZ(-15px); }
+    to { opacity: 1; transform: translateY(0) translateZ(0); }
+}
+
+@keyframes fadeInLeft3d {
+    from { opacity: 0; transform: translateX(-25px) translateZ(-10px); }
+    to { opacity: 1; transform: translateX(0) translateZ(0); }
+}
+
+@keyframes fadeInRight3d {
+    from { opacity: 0; transform: translateX(25px) translateZ(-10px); }
+    to { opacity: 1; transform: translateX(0) translateZ(0); }
+}
+
+/* Ripple Effect */
 .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(70, 130, 180, 0.6);
+    background: rgba(108, 99, 255, 0.5);
     transform: scale(0);
     animation: ripple-animation 0.6s ease-out;
     pointer-events: none;
 }
 
 @keyframes ripple-animation {
-    0% {
-        transform: scale(0) translateZ(0);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(4) translateZ(10px);
-        opacity: 0;
-    }
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(4); opacity: 0; }
 }
 
-.ripple-effect {
-    position: relative;
-    overflow: hidden;
-}
-
-.ripple-effect::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: rgba(70, 130, 180, 0.5);
-    border-radius: 50%;
-    transform: scale(0);
-    pointer-events: none;
-}
-
-.ripple-effect:active::after {
-    animation: ripple 0.6s ease-out;
-}
-
-/* Perspective for containers */
+/* Perspective for sections */
 .section-padding {
     perspective: 2000px;
     transform-style: preserve-3d;
 }
 
-/* Responsive 3D Effects */
+/* Responsive - reduce 3D on mobile */
 @media (max-width: 768px) {
-    /* Reduce 3D effects on mobile for performance */
     .card-3d:hover,
     .stat-card:hover,
     .skill-category:hover,
-    .cert-card:hover {
-        transform: translateY(-10px) scale(1.02);
+    .cert-card:hover,
+    .ai-card:hover,
+    .project-card:hover {
+        transform: translateY(-8px) scale(1.01);
     }
     
     .social-icon:hover {
-        transform: translateY(-5px) scale(1.1);
+        transform: translateY(-4px) scale(1.05);
     }
-}
-
-/* Smooth entrance animations */
-@keyframes fadeInUp3d {
-    from {
-        opacity: 0;
-        transform: translateY(30px) translateZ(-20px) rotateX(-10deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) translateZ(0) rotateX(0);
-    }
-}
-
-@keyframes fadeInLeft3d {
-    from {
-        opacity: 0;
-        transform: translateX(-30px) translateZ(-20px) rotateY(-10deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) translateZ(0) rotateY(0);
-    }
-}
-
-@keyframes fadeInRight3d {
-    from {
-        opacity: 0;
-        transform: translateX(30px) translateZ(-20px) rotateY(10deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) translateZ(0) rotateY(0);
-    }
-}
-
-.animate-on-scroll {
-    animation: fadeInUp3d 0.8s ease-out;
 }
