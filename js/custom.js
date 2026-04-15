@@ -388,13 +388,13 @@
   if (typeof Typed !== 'undefined' && $('#typed-text').length) {
     new Typed('#typed-text', {
       strings: [
+        'AI/ML Graduate Student',
+        'Computer Vision Engineer',
+        'Deep Learning Researcher',
+        'Quantum AI Enthusiast',
         'Generative AI Specialist',
-        'LLM & RAG Architect',
-        'Multi-Agent Systems Builder',
-        'Azure AI Engineer',
-        'Full-Stack AI Developer',
-        'Cloud ML Engineer',
-        'Prompt Engineering Expert'
+        'Former Senior Software Engineer',
+        'Machine Learning Expert'
       ],
       typeSpeed: 45,
       backSpeed: 25,

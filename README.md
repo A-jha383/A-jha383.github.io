@@ -1,8 +1,8 @@
 # Ayush Jha - Portfolio Website
 
-## 🚀 Modern AI Developer Portfolio
+## 🚀 AI/ML Graduate Student & Former Senior Software Engineer
 
-A completely redesigned, modern portfolio website showcasing expertise in Generative AI, Full-Stack Development, and Cloud Technologies.
+A modern portfolio website showcasing comprehensive expertise in Computer Vision, Machine Learning (from basic to advanced Deep Learning), Generative AI, and emerging Quantum AI research. Currently pursuing M.Sc. in Computer Science at Universität Paderborn, Germany, with 3+ years of industry experience working with global clients like Mercedes-Benz, JCI, and MG.
 
 ## ✨ Features
 
