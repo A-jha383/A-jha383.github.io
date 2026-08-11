@@ -1,130 +1,72 @@
-# Ayush Jha - Portfolio Website
+# Ayush Jha — AI/ML Portfolio (React + Three.js)
 
-## 🚀 AI/ML Graduate Student & Former Senior Software Engineer
+A full migration of the original HTML/CSS/Bootstrap portfolio into a modern,
+bilingual React + Three.js single-page app with a distinctive "research lab
+/ terminal" visual identity.
 
-A modern portfolio website showcasing comprehensive expertise in Computer Vision, Machine Learning (from basic to advanced Deep Learning), Generative AI, and emerging Quantum AI research. Currently pursuing M.Sc. in Computer Science at Universität Paderborn, Germany, with 3+ years of industry experience working with global clients like Mercedes-Benz, JCI, and MG.
+## Stack
+- **React 19** + **Vite 8**
+- **Three.js** via **@react-three/fiber** + **@react-three/drei** + **@react-three/postprocessing** — interactive neural-network hero orb (bloom glow, mouse parallax, auto-rotation) plus a unique lazy-mounted ambient 3D motif behind every other section
+- **Tailwind CSS v4** — near-black canvas, signature acid-lime accent, sharp-cornered "bracket" panels, bento-style grids
+- **Framer Motion** — scroll reveals, magnetic buttons, animated counters, scroll progress bar, custom cursor
+- **react-icons**
 
-## ✨ Features
+## Ambient 3D backgrounds
+Every section (not just the Hero) has its own low-key, unique Three.js motif rendered behind the content via `SectionCanvas` (`src/components/SectionCanvas.jsx`):
+- **Hero** — `NeuralOrb`: the detailed neural-network centerpiece.
+- **About** — Identity Core: a slow wireframe icosahedron with a point halo.
+- **Experience** — Trajectory Stream: an upward-flowing particle stream.
+- **AI Expertise** — Neural Matrix: a pulsing point grid with flickering links.
+- **Projects** — Drifting Shards: floating rotating octahedra.
+- **Skills** — Skill Knot: a single rotating wireframe torus knot.
+- **Education** — Knowledge Orbits: concentric rings with orbiting nodes.
+- **Certifications** — Floating Gems: faceted shapes drifting upward.
+- **Contact** — Perspective Floor: a receding terminal-style grid.
 
-- **Modern Design**: Clean, professional design with smooth animations and transitions
-- **Fully Responsive**: Optimized for all devices (mobile, tablet, desktop)
-- **Dark Theme**: Eye-friendly dark theme with steel blue accent colors
-- **Animated Elements**: 
-  - Typed.js for dynamic text animation
-  - Smooth scroll animations
-  - Hover effects and transitions
-  - Parallax effects
-- **Performance Optimized**: Fast loading with optimized assets
-- **SEO Friendly**: Proper meta tags and semantic HTML
+Each scene lives in `src/components/scenes/AmbientScenes.jsx`. `SectionCanvas` only mounts the underlying WebGL `<Canvas>` while the section is within 250px of the viewport (`IntersectionObserver`), uses a capped low DPR and no antialiasing, respects `prefers-reduced-motion`, and renders at low opacity behind `z-10` content so text stays fully legible.
 
-## 📋 Sections
+## Design language
+- Signature color: acid lime (`#d7ff3f`) on near-black, with ice-blue and coral as secondary accents — not the generic purple/cyan gradient look.
+- Editorial, left-aligned section headers with `/NN` index numbers.
+- Bento-style asymmetric grids for AI Expertise and Skills.
+- Bracket-corner hover state on every card (sci-fi HUD detail).
+- Vertical numbered dock navigation (desktop) with active-section tooltip labels; slim top bar + full-screen mobile menu.
+- Custom cursor (dot + lagging ring, desktop only) and magnetic CTA buttons.
+- Infinite marquee ticker of the tech stack under the hero.
+- Contact section is a real interactive terminal (`src/components/InteractiveTerminal.jsx` + `src/components/Contact.jsx`) — type commands like `help`, `contact`, `resume`, `skills`, `linkedin`, `whoami` and get live responses; supports English and German command aliases, arrow-key history, and quick-command chips.
 
-1. **Hero Section**: Dynamic introduction with animated roles
-2. **About**: Professional summary with key statistics
-3. **Experience**: Detailed timeline of professional journey
-4. **Skills**: Comprehensive technical skills organized by categories
-5. **Education**: Academic background with achievements
-6. **Certifications**: Professional certifications with verification links
-7. **Awards**: Recognition and achievements
-8. **Contact**: Contact form and social links
+## Bilingual (EN / DE)
+- Full English + German translations for every piece of UI chrome and content — nav labels, section headers, form fields, footer, and all data (bio, experience, projects, skills, education, certifications).
+- Toggle lives in the top bar (desktop), mobile menu, and footer.
+- Language choice persists (`localStorage`) and defaults to the browser's language on first visit.
+- Add or edit copy in `src/i18n/ui.js` (chrome strings) and `src/data/content.js` (`content.en` / `content.de`).
 
-## 🛠️ Technologies Used
+## Getting started
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with CSS Grid, Flexbox, and animations
-- **JavaScript/jQuery**: Interactive elements and smooth scrolling
-- **Bootstrap 5**: Responsive grid system
-- **Typed.js**: Text animation library
-- **Font Awesome 6**: Modern icon library
-- **Google Fonts**: Inter and JetBrains Mono fonts
-
-## 🎨 Design System
-
-### Color Palette
-- Primary Color: `#4682B4` (Steel Blue)
-- Secondary Color: `#5B9BD5` (Lighter Blue)
-- Accent Color: `#36A0F5` (Bright Blue)
-- Dark Background: `#0a192f`
-- Darker Background: `#020c1b`
-
-### Typography
-- Primary Font: Inter (Modern sans-serif)
-- Monospace Font: JetBrains Mono (Code snippets and technical text)
-
-## 📱 Responsive Breakpoints
-
-- Desktop: 1200px and above
-- Tablet: 768px - 1199px
-- Mobile: Below 768px
-
-## 🚀 Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/A-jha383/A-jha383.github.io.git
-   ```
-
-2. Open `index.html` in your browser or deploy to GitHub Pages
-
-3. The website is automatically deployed at: `https://a-jha383.github.io`
-
-## 📝 Customization
-
-### Update Content
-- Edit `index.html` to update personal information
-- Modify `css/style.css` for styling changes
-- Update `js/custom.js` for behavior modifications
-
-### Update Resume
-- Replace `Ayush_Jha_Latest-1.pdf` with your updated resume
-
-## 📄 File Structure
-
-```
-A-jha383.github.io/
-├── index.html                  # Main HTML file
-├── index_old_backup.html       # Backup of old version
-├── css/
-│   ├── style.css              # Main stylesheet (new)
-│   ├── style_old_backup.css   # Backup of old stylesheet
-│   └── bootstrap/             # Bootstrap CSS
-├── js/
-│   ├── custom.js              # Custom JavaScript
-│   ├── jquery/                # jQuery library
-│   └── bootstrap/             # Bootstrap JS
-├── img/                       # Images folder
-├── Ayush_Jha_Latest-1.pdf    # Resume PDF
-└── README.md                  # This file
+```bash
+npm install
+npm run dev       # local dev server
+npm run build     # production build -> dist/
+npm run preview   # preview the production build
 ```
 
-## 🔗 Links
+## Structure
 
-- **Portfolio**: [https://a-jha383.github.io](https://a-jha383.github.io)
-- **LinkedIn**: [linkedin.com/in/00-ayush-jha](https://linkedin.com/in/00-ayush-jha)
-- **GitHub**: [github.com/a-jha383](https://github.com/a-jha383)
-- **LeetCode**: [leetcode.com/ayushj383](https://leetcode.com/ayushj383)
+```
+src/
+  components/       # UI + 3D components
+  i18n/
+    ui.js           # chrome strings (nav, buttons, form labels...) in en/de
+    LanguageContext.jsx
+  data/content.js    # content.en / content.de — bio, experience, projects, skills...
+  index.css          # design tokens (Tailwind v4 @theme) + custom utilities
+public/
+  images/
+  Ayush_Jha_Resume.pdf
+```
 
-## 📧 Contact
+## Deploying
 
-- **Email**: official.ayushjha@gmail.com
-- **LinkedIn**: [00-ayush-jha](https://linkedin.com/in/00-ayush-jha)
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern portfolio trends
-- Icons from Font Awesome
-- Fonts from Google Fonts
-- Animation library: Typed.js
-
----
-
-**Version**: 2.0  
-**Last Updated**: October 2025  
-**Status**: ✅ Active
-
-Made with ❤️ by Ayush Jha
-
+`npm run build` outputs a static `dist/` folder — deploy it to GitHub Pages,
+Vercel, Netlify, or any static host. For GitHub Pages specifically, set
+`base: '/<repo-name>/'` in `vite.config.js` if not deploying to a root domain.
