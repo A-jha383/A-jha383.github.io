@@ -123,7 +123,7 @@ export default function Contact() {
   const resumeOutput = (
     <div>
       <p className="mb-2">{t.contact.resumeOut}</p>
-      <ContactRow icon="download" label="resume.pdf" value="Ayush_Jha_Resume.pdf" action={t.contact.download} href={profile.resume} download />
+      <ContactRow icon="download" label="resume.pdf" value={profile.resume.split("/").pop()} action={t.contact.download} href={profile.resume} download />
     </div>
   );
 

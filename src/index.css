@@ -161,6 +161,24 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(0, 0);
 }
 
+.tilt-surface {
+  will-change: transform;
+}
+.tilt-glare {
+  background: radial-gradient(
+    circle at var(--gx, 50%) var(--gy, 50%),
+    rgba(215, 255, 63, 0.22),
+    rgba(255, 255, 255, 0.08) 25%,
+    transparent 60%
+  );
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tilt-surface:hover .tilt-glare {
+  opacity: 1;
+}
+
 .pill {
   font-family: var(--font-mono);
   font-size: 0.7rem;

@@ -3,18 +3,18 @@ const profileBase = {
   github: "https://github.com/a-jha383",
   leetcode: "https://leetcode.com/ayushj383",
   email: "official.ayushjha@gmail.com",
-  resume: "/Ayush_Jha_Resume.pdf",
-  photo: "/images/profile.jpg",
+  photo: "/images/photo.png",
 };
 
 export const content = {
   en: {
     profile: {
       ...profileBase,
+      resume: "/Resume/Ayush_Jha_EN.pdf",
       name: "Ayush Jha",
       badge: "M.Sc. CS Student · AI/ML Specialist",
       description:
-        "Graduate student at Universität Paderborn, working as a Werkstudent (Technical Consultant) at RealThingks GmbH. 3+ years building Computer Vision, Deep Learning, and GenAI solutions for Mercedes-Benz, JCI, and MG.",
+        "Graduate student at Universität Paderborn, working as a Werkstudent (Technical Consultant) at RealThingks GmbH. 3+ years building Computer Vision, Deep Learning, and GenAI solutions for global enterprise clients.",
       taglines: [
         "AI/ML Engineer",
         "Generative AI Specialist",
@@ -31,7 +31,7 @@ export const content = {
     about: {
       heading: "AI/ML Graduate Student & Working Student, Technical Consultant",
       paragraphs: [
-        "Currently pursuing a Master's in Computer Science at Universität Paderborn (Germany) while working as a Working Student – Technical Consultant at RealThingks GmbH. Previously spent 3+ years at Interra Information Technologies — most recently as a Senior System Analyst (L5) — architecting and deploying production-grade AI solutions for global enterprises including Mercedes-Benz, JCI, and MG.",
+        "Currently pursuing a Master's in Computer Science at Universität Paderborn (Germany) while working as a Working Student – Technical Consultant at RealThingks GmbH. Previously spent 3+ years at Interra Information Technologies — most recently as a Senior System Analyst (L5) — architecting and deploying production-grade AI solutions for global enterprise clients.",
         "My expertise spans the full AI stack — from computer vision applications and deep learning models (CNNs, RNNs, Transformers) to generative AI systems with custom multi-agent architectures and hybrid RAG pipelines. I've built ML solutions ranging from basic models to advanced ensemble methods, improving prediction accuracy by 35%.",
         "As a Microsoft Certified DevOps Expert and Azure AI Engineer, I combine deep AI knowledge across computer vision, machine learning, and GenAI — including large-scale data platforms like Databricks and Spark — with robust engineering practices to deliver reliable, production-ready intelligent systems.",
       ],
@@ -98,7 +98,7 @@ export const content = {
         org: "Interra Information Technologies (India) Pvt. Ltd.",
         location: "Kolkata, India",
         points: [
-          "Delivered AI/ML solutions for prominent global clients including JCI, Mercedes-Benz, and MG, driving digital transformation initiatives",
+          "Delivered AI/ML solutions for prominent global enterprise clients, driving digital transformation initiatives",
           "Developed computer vision applications for object detection, image classification, and visual recognition using OpenCV, TensorFlow, and PyTorch",
           "Built and deployed deep learning models including CNNs, RNNs, and Transformers for production use cases",
           "Created machine learning pipelines from basic models to advanced ensemble methods, improving prediction accuracy by 35%",
@@ -371,10 +371,11 @@ export const content = {
   de: {
     profile: {
       ...profileBase,
+      resume: "/Resume/Ayush_Jha_DE.pdf",
       name: "Ayush Jha",
       badge: "M.Sc. Informatik-Student · KI/ML-Spezialist",
       description:
-        "Masterstudent an der Universität Paderborn und Werkstudent (Technical Consultant) bei der RealThingks GmbH. 3+ Jahre Erfahrung im Aufbau von Computer-Vision-, Deep-Learning- und GenAI-Lösungen für Mercedes-Benz, JCI und MG.",
+        "Masterstudent an der Universität Paderborn und Werkstudent (Technical Consultant) bei der RealThingks GmbH. 3+ Jahre Erfahrung im Aufbau von Computer-Vision-, Deep-Learning- und GenAI-Lösungen für internationale Unternehmenskunden.",
       taglines: [
         "KI/ML-Ingenieur",
         "Spezialist für Generative KI",
@@ -391,7 +392,7 @@ export const content = {
     about: {
       heading: "KI/ML-Masterstudent & Werkstudent, Technical Consultant",
       paragraphs: [
-        "Ich studiere derzeit im Master Informatik an der Universität Paderborn und arbeite parallel als Werkstudent (Technical Consultant) bei der RealThingks GmbH. Zuvor war ich 3+ Jahre bei Interra Information Technologies tätig — zuletzt als Senior System Analyst (L5) — und habe dort produktionsreife KI-Lösungen für globale Unternehmen wie Mercedes-Benz, JCI und MG konzipiert und implementiert.",
+        "Ich studiere derzeit im Master Informatik an der Universität Paderborn und arbeite parallel als Werkstudent (Technical Consultant) bei der RealThingks GmbH. Zuvor war ich 3+ Jahre bei Interra Information Technologies tätig — zuletzt als Senior System Analyst (L5) — und habe dort produktionsreife KI-Lösungen für internationale Unternehmenskunden konzipiert und implementiert.",
         "Meine Expertise umfasst den gesamten KI-Stack — von Computer-Vision-Anwendungen und Deep-Learning-Modellen (CNNs, RNNs, Transformer) bis hin zu generativen KI-Systemen mit eigenen Multi-Agenten-Architekturen und hybriden RAG-Pipelines. Ich habe ML-Lösungen von einfachen Modellen bis zu fortgeschrittenen Ensemble-Methoden entwickelt und die Vorhersagegenauigkeit um 35 % verbessert.",
         "Als Microsoft Certified DevOps Expert und Azure AI Engineer verbinde ich tiefes KI-Wissen in den Bereichen Computer Vision, Machine Learning und GenAI — einschließlich großskaliger Datenplattformen wie Databricks und Spark — mit solider Engineering-Praxis, um zuverlässige, produktionsreife intelligente Systeme zu liefern.",
       ],
@@ -458,7 +459,7 @@ export const content = {
         org: "Interra Information Technologies (India) Pvt. Ltd.",
         location: "Kalkutta, Indien",
         points: [
-          "KI/ML-Lösungen für namhafte internationale Kunden wie JCI, Mercedes-Benz und MG geliefert und digitale Transformationsinitiativen vorangetrieben",
+          "KI/ML-Lösungen für namhafte internationale Unternehmenskunden geliefert und digitale Transformationsinitiativen vorangetrieben",
           "Computer-Vision-Anwendungen für Objekterkennung, Bildklassifikation und visuelle Erkennung mit OpenCV, TensorFlow und PyTorch entwickelt",
           "Deep-Learning-Modelle inklusive CNNs, RNNs und Transformern für den Produktivbetrieb entwickelt und bereitgestellt",
           "Machine-Learning-Pipelines von einfachen Modellen bis zu fortgeschrittenen Ensemble-Methoden erstellt und die Vorhersagegenauigkeit um 35 % verbessert",
