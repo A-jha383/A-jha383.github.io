@@ -70,3 +70,5 @@ public/
 `npm run build` outputs a static `dist/` folder — deploy it to GitHub Pages,
 Vercel, Netlify, or any static host. For GitHub Pages specifically, set
 `base: '/<repo-name>/'` in `vite.config.js` if not deploying to a root domain.
+
+
